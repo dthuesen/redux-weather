@@ -20,7 +20,7 @@ export default (props) => {
         <SparklinesLine style={{strokeWidth: "2", fill: "#efeff4", }} color={props.lineColor} />
         <SparklinesReferenceLine type="avg"/>
       </Sparklines>
-      <div>Average: { average(props.data) } { props.unit } &nbsp;|&nbsp; Actual: { current(props.data) } { props.unit }</div>
+      <div>Average: { average(props.data) } { props.unit } &nbsp;|&nbsp; Current: { current(props.data) } { props.unit }</div>
     </div>
   )
 }
