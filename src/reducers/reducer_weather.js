@@ -8,9 +8,11 @@ export default function(state = [], action) {
   switch (action.type) {
     case FETCH_WEATHER:
       // return state.concat([action.payload.data]); // same approach as below
+      console.log('state in reducer weather: ', [action.payload.data, ...state])
       return [action.payload.data, ...state]; // this way the state won't be mutated because a new array will be added to the state
     default:
       return state
   }
+  
   return state;
 }

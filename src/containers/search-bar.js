@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchWeather } from '../../actions/index'
+import { fetchWeather } from '../actions/index'
 
 class SearchBar extends Component {
 
@@ -9,7 +9,7 @@ class SearchBar extends Component {
     super(props);
     
     this.state = {
-      term: ''
+      term: 'Hamburg'
     }
 
     this.onInputChange = this.onInputChange.bind(this)
@@ -34,7 +34,6 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        This is the SearchBar Component
         <form onSubmit={this.onFormSubmit} className="input-group" >
           <input 
             placeholder="Get a five day forecast in your favorite cities." 
